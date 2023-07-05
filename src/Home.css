@@ -9,7 +9,7 @@
 .Home {
   height: 100vh;
   width: 100vw;
-  overflow-X: hidden;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 

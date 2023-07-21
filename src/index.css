@@ -8,8 +8,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgb(130, 130, 130);
+  background-color: #ffffffe9;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,21 +19,39 @@
   overflow: hidden;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  width: 100vw;
+}
+
+a {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
+  font-weight: 500;
+  color: #c0ffdb;
+  text-decoration: inherit;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-inline: 0.4rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+a:hover {
+  color: #f6f7ff;
+  border-color: #c0ffdb;
+  transform: translateY(-1px);
+}
+a:active {
+  border-color: rgb(236, 159, 241) ;
 }
 
 h1 {
@@ -42,12 +60,15 @@ h1 {
 }
 
 button {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
+  font-weight: 500;
+  color: #c0ffdb;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
@@ -58,6 +79,9 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+button:active {
+  border-color: rgb(236, 159, 241) ;
 }
 
 @media (prefers-color-scheme: light) {
@@ -71,4 +95,38 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.non-transfer {
+  transform: unset !important;
+}
+
+.blacktxt {
+  color: #6febdb;
+  font-family: 'bangers';
+  font-weight: 400;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  background-color: #00000000;
+  padding: 5px 15px 5px 15px;
+  border-radius: 6px;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.spacearound {
+  justify-content: space-evenly;
+  align-self: center;
 }
